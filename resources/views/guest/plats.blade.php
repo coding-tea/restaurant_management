@@ -1,6 +1,7 @@
 @extends('layouts.landing_page')
 @section('content')
     @isset($plats)
+        <div class="header" style="background-image: url('{{ asset($plats[0]->categorie->photo) }}')"></div>
         <div class="plat_container">
             @forelse ($plats as $item)
                 <div class="plat_card">
