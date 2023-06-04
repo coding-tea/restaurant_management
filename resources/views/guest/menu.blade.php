@@ -6,7 +6,7 @@
     @forelse ($categorie as $item)
         <div class="card-menu">
             <div class="card_header">
-                <img src="" alt="">
+                <img src="{{ asset($item->photo) }}" alt="{{ $item->titre }}">
             </div>
             <div class="card_body" style="margin-bottom: 15px">
                 <h1> {{ $item->titre }} </h1>

@@ -53,6 +53,23 @@
       opacity: .9;
     }
 
+    .card_header img{
+      max-height: 200px;
+      width: 100%;
+    }
+
+    .card_header{
+      margin-bottom: 10px;
+    }
+
+    .header{
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      height: 300px;
+      margin-bottom: 20px;
+    }
+
     header{
       width: 100%;
       padding: 15px 200px;
@@ -80,6 +97,30 @@
       color: #fff;
       padding: 5px 13px;
       border-radius: 5px;
+    }
+
+    .plat_container{
+      padding: 20px 200px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plat_card{
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+    }
+    .price{
+      font-size: 20px;
+      color: #2a6665;
+      margin-bottom: 10px;
+    }
+
+    .title{
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
     }
   </style>
 </head>
