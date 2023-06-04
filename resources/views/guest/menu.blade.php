@@ -8,7 +8,7 @@
             <div class="card_header">
                 <img src="" alt="">
             </div>
-            <div class="card_body">
+            <div class="card_body" style="margin-bottom: 15px">
                 <h1> {{ $item->titre }} </h1>
             </div>
             <div class="card_cta">

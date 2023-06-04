@@ -39,8 +39,18 @@
       border-radius: 10px;
     }
 
-    .cta{
-      background-color: ;
+    .cta a{
+      background-color: #2a6665;
+      color: #fff;
+      border-radius: 4px;
+      padding: 8px 15px;
+      box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+      transition: .4s ease;
+    }
+
+    .cta a:hover{
+      box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.3);
+      opacity: .9;
     }
 
     header{
@@ -52,6 +62,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    .logo{
+      text-transform: uppercase;
+      color: #2a6665;
+      font-weight: bold;
+    }
+
+    nav a{
+      margin-right: 5px;
+      text-transform: capitalize;
+    }
+
+    .login{
+      background-color: #2a6665;
+      color: #fff;
+      padding: 5px 13px;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -66,7 +94,7 @@
       <a href="#">presentation</a>
       <a href="#">localisation</a>
       <a href="#">contact</a>
-      <a href="#">login</a>
+      <a href="#" class="login">login</a>
     </nav>
   </header>
 
