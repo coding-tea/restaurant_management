@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/menu', [CategorieController::class, 'index'])->name('menu');
+Route::get('/plats/{id}', [CategorieController::class, 'plats'])->name('categorie-plats');

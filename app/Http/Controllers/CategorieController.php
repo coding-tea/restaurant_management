@@ -12,9 +12,9 @@ class CategorieController extends Controller
         return view('guest.menu', compact('categorie'));
     }
 
-    public function plats($categorie)
+    public function plats($categorie_id)
     {
-        $plats = Categorie::find($categorie)->plats;
-        return view('visiteur.plats', compact('plats'));
+        $plats = Categorie::find($categorie_id)->plats;
+        return view('guest.plats', compact('plats'));
     }
 }

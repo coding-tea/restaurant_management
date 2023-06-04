@@ -30,22 +30,49 @@
         flex-wrap: wrap;
         flex-direction: row;
     }
+
+    .card-menu{
+      width: 45%;
+      margin: 10px;
+      box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .cta{
+      background-color: ;
+    }
+
+    header{
+      width: 100%;
+      padding: 15px 200px;
+      background-color: #fff;
+      box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
 
-    <div>
+  <header>
+    <div class="logo">
+      <span>Resto</span>
+    </div>
+    <nav>
+      <a href="#">menu</a>
+      <a href="#">presentation</a>
+      <a href="#">localisation</a>
+      <a href="#">contact</a>
+      <a href="#">login</a>
+    </nav>
+  </header>
+
+    <div style="width: 100%">
         @yield('content')
     </div>
 
-    {{-- <script>
-        // Initialization for ES Users
-        import {
-        Ripple,
-        initTE,
-        } from "tw-elements";
-
-        initTE({ Ripple });
-    </script> --}}
 </body>
 </html>
