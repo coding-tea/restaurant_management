@@ -14,9 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.landing_page');
-});
-
+Route::get('/', [CategorieController::class, 'index'])->name('menu');
 Route::get('/menu', [CategorieController::class, 'index'])->name('menu');
 Route::get('/plats/{id}', [CategorieController::class, 'plats'])->name('categorie-plats');

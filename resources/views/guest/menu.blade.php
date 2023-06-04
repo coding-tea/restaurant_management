@@ -2,7 +2,7 @@
 @section('content')
 
     @isset($categorie)
-    <div class="container">
+    <div class="container_menu">
     @forelse ($categorie as $item)
         <div class="card-menu">
             <div class="card_header">
