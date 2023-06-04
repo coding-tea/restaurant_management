@@ -21,7 +21,12 @@
         margin: 0;
         box-sizing: border-box;
     }
-    .container{
+
+    body{
+      width: 100%;
+    }
+
+    .container_menu{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -32,7 +37,7 @@
     }
 
     .card-menu{
-      width: 45%;
+      width: 40%;
       margin: 10px;
       box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
       padding: 20px;
@@ -66,6 +71,7 @@
       background-position: center;
       background-size: 100%;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       height: 300px;
       margin-bottom: 20px;
     }
@@ -109,7 +115,8 @@
       padding: 20px;
       background-color: #fff;
       box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
     }
     .price{
       font-size: 20px;
@@ -121,6 +128,16 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-bottom: 10px;
+    }
+
+    .stars{
+      margin-top: 10px;
+      display: flex;
+    }
+
+    .star{
+      width: 20px;
+      margin-right: 5px;
     }
   </style>
 </head>
