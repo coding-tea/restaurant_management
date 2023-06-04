@@ -9,7 +9,7 @@ class CategorieController extends Controller
 {
     public function index(){
         $categorie = Categorie::all();
-        return view('visiteur.menu', compact('categorie'));
+        return view('guest.menu', compact('categorie'));
     }
 
     public function plats($categorie)
