@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/', [ CategorieController::class, 'index' ])->name('menu');
+Route::get('/', [ CategorieController::class, 'index' ]);
 Route::get('/menu', [ CategorieController::class, 'index' ])->name('menu');
 Route::get('/plats/{id}', [ CategorieController::class, 'plats' ])->name('categorie-plats');
 

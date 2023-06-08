@@ -14,30 +14,32 @@
                         <p> {{ $item->description }} </p>
                         <div class="stars">
                             ({{ count($item->commandes) }}) 
+                            @php $numStar = 1; @endphp
                             @if (count($item->commandes) >= 100)
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-
+                            @php
+                                $numStar = 5;
+                            @endphp
                             @elseif(count($item->commandes) <= 100 && count($item->commandes) >= 50)
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
+                            @php
+                                $numStar = 4;
+                            @endphp
                             @elseif(count($item->commandes) <= 50 && count($item->commandes) >= 20)
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
+                            @php
+                                $numStar = 3;
+                            @endphp
                             @elseif(count($item->commandes) > 4)
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
+                            @php
+                                $numStar = 2;
+                            @endphp
                             @elseif(count($item->commandes) <= 4)
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
-                            @else
-                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
+                            @php
+                                $numStar = 1;
+                            @endphp
                             @endif
+
+                            @for ($i = 0; $i < $numStar ; $i++)
+                                <img class="star" src="{{ asset('images/star.png') }}" alt="star">
+                            @endfor
                         </div>
                     </div>
                 </div>
