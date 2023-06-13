@@ -145,14 +145,12 @@
 
   <header>
     <div class="logo">
-      <span>Resto</span>
+      <span> {{ auth()->user()->name }} </span>
     </div>
     <nav>
-      <a href="#">menu</a>
-      <a href="#">presentation</a>
-      <a href="#">localisation</a>
-      <a href="#">contact</a>
-      <a href="{{ route('login') }}" class="login">login</a>
+      <a href="{{ route('dashboard') }}" class="{{ Request::is('dashboard') ? 'active' : '' }}" >dashboard</a>
+      <a href="#" class="{{ Request::is('commande') ? 'active' : '' }}" >commande</a>
+      <a href="#" class="login">new commande</a>
     </nav>
   </header>
 

@@ -1,9 +1,9 @@
 ## Project looks like
 
 <img src='./lanfing.PNG' />
-<br>
+
     the project is a restaurant management system
-<br>
+
 <img src='./plats.PNG' />
 
 ## How to install it

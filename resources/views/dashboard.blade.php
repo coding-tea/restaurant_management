@@ -1,17 +1,26 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.dashboard')
+@section('content')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
-                </div>
+    @isset($categorie)
+    <div class="container_menu">
+    @forelse ($categorie as $item)
+        <div class="card-menu">
+            <div class="card_header">
+                <img src="{{ asset($item->photo) }}" alt="{{ $item->titre }}">
+            </div>
+            <div class="card_body" style="margin-bottom: 15px">
+                <h1> {{ $item->titre }} </h1>
+            </div>
+            <div class="card_cta">
+                <button type="button" class="cta">
+                    <a href="{{ route('categorie-plats', $item->id) }}">Discover {{ count($item->plats) }} plats</a>
+                </button>
             </div>
         </div>
+    @empty
+        <div class="empty">empty</div>
+    @endforelse
     </div>
-</x-app-layout>
+    @endisset
+
+@endsection

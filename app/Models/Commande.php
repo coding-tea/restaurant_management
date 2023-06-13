@@ -18,4 +18,10 @@ class Commande extends Model
     public function serveur(){
         return $this->belongsTo(Serveur::class);
     }
+
+    public function total(){
+        return $this->plats->sum(function($plat){
+            return $plat->prix;
+        });
+    }
 }
