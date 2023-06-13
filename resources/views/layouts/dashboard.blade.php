@@ -139,6 +139,38 @@
       width: 20px;
       margin-right: 5px;
     }
+
+    .dashboard_menu{
+      margin-right: 10px;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 4px 2px 20px rgba(0, 0, 0, 0.1);
+    }
+    .container_menu{
+      justify-content: space-around;
+    }
+
+    .dashboard_plat{
+      min-height: 220px;
+      width: 20%;
+      padding: 15px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 4px 2px 20px rgba(0, 0, 0, 0.1);
+      margin-right: 10px;
+      text-align: center;
+    }
+
+    .categorie_active{
+      background-color: #2a6665;
+      color: #fff;
+    }
+
+    .active{
+      color: #2a6665;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -148,7 +180,7 @@
       <span> {{ auth()->user()->name }} </span>
     </div>
     <nav>
-      <a href="{{ route('dashboard') }}" class="{{ Request::is('dashboard') ? 'active' : '' }}" >dashboard</a>
+      <a href="{{ route('dashboard') }}" class="{{ Request::is('dashboard*') ? 'active' : '' }}" >dashboard</a>
       <a href="#" class="{{ Request::is('commande') ? 'active' : '' }}" >commande</a>
       <a href="#" class="login">new commande</a>
     </nav>

@@ -21,7 +21,7 @@ class Commande extends Model
 
     public function total(){
         return $this->plats->sum(function($plat){
-            return $plat->prix;
+            return $plat->prix * $plat->pivot->nombre;
         });
     }
 }
